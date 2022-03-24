@@ -1,5 +1,11 @@
 .list {
     margin-bottom: 30px;
+
+    &__add-button {
+        opacity: 1;
+    }
+
+
     li {
         display: flex;
         align-items: center;
@@ -18,7 +24,7 @@
             display: flex;
             margin-right: 10px;
             img {
-                width: 40px;
+                width: 50px;
                 opacity: 0.6;
             }
         } 
