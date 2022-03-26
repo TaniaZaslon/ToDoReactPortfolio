@@ -1,7 +1,9 @@
 import React from 'react';
-import List from './components/List';
+import List from './components/List/List.jsx';
 import listSvg from './assets/img/list.png';
-import plusSvg from './assets/img/plus.png';
+import AddList from './components/AddList/AddList.jsx';
+import DB from './assets/db.json';
+
 
 function App() {
   return (
@@ -30,13 +32,7 @@ function App() {
         ]}
           IsRemovable
         />
-        <List items={[
-          {
-            className: 'list_add-button',
-            icon: (<img src={plusSvg} alt="add List icon" />),
-            name: 'add list',
-          }
-        ]} />
+        <AddList colors={DB.colors} />
     </div>
       <div className="todo__tasks">
       </div>
