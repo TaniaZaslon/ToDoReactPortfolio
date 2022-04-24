@@ -24,8 +24,9 @@ const AddList = ({colors}) => {
                 <input className="field" type="text" placeholder="list name" />
                 <div className="add-list__popup-colors">
                     <ul>
-                    <li><Badge/></li>
-                    <li><Badge/></li>
+                    {colors.map(color => (
+                    <Badge key={color.id} color={color.name}/>
+                    ))}
                 </ul>
                 </div>
                 <button className="button">Add</button>

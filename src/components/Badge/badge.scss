@@ -3,8 +3,10 @@
     width: 10px;
     height: 10px;
     border-radius: 30px;
-    position: relative;
-    left: 5px;
+    
+    &--grey {
+        background-color: #c9D1D3;
+    }
 
     &--green {
         background-color: #428883;
@@ -16,5 +18,17 @@
 
     &--pink {
         background-color: #FFBBCC;
+    }
+    &--lime {
+        background-color: #77e9ae;
+    }
+    &--purple {
+        background-color: #f5b4ef;
+    }
+    &--black {
+        background-color: #7a787c;
+    }
+    &--red {
+        background-color: #f39494;
     }
 } 

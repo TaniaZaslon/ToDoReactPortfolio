@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Badge from '../Badge/badge';
 
 const List = ({items, isRemoveble, onClick }) => {
-    return(
+    return (
         <ul onClick={onClick} className="list">
             {items.map((item, index) => (
                  <li 
@@ -15,7 +15,7 @@ const List = ({items, isRemoveble, onClick }) => {
                         {item.icon ? (
                         item.icon
                      ): (
-                        <Badge/>
+                        <Badge color={item.color}/>
                      )}
                     </i>
                     <span>{item.name}</span>

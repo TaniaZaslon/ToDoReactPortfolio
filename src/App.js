@@ -23,7 +23,7 @@ function App() {
           {
             color: 'blue',
             name: 'frontend',
-            active: true
+            active: true,
           },
           {
             color: 'pink',
