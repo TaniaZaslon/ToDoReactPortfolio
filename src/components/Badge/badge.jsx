@@ -1,6 +1,9 @@
 import React from 'react';
+import classNames from 'classnames'
+
 import './badge.scss';
 
-const Badge = ({ color }) =>  
-<i className={`badge badge--${color}`}></i>
+const Badge = ({ color, onClick, className }) =>  
+<i onClick ={onClick} className={classNames('badge', {[`badge badge--${color}`]: color}, className)}></i>
+
 export default  Badge;
