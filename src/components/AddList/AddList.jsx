@@ -6,7 +6,7 @@ import Badge from "../Badge/badge";
 
 import closeIcon from '../../assets/img/close-icon.jpg'
 
-const AddList = ({colors}) => {
+const AddList = ({colors, onAdd}) => {
     const [visiblePopup, setVisiblePopup] = useState(false);
     const [seletedColor, selectColor] = useState(colors[0].id);
     const [inputValue, setInputValue] = useState('');
@@ -16,7 +16,8 @@ const AddList = ({colors}) => {
             alert('enter list name');
             return;
         }
-console.log({ id: Math.random(), name: inputValue, colorId: seletedColor});
+        const color = colors.filter(c => c.id === seletedColor)[0].name;
+        onAdd({ id: Math.random(), name: inputValue, color});
 };
 
 return(
