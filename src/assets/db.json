@@ -2,36 +2,36 @@
   "lists": [
     {
       "id": 1,
-      "name": "Продажи",
+      "name": "Sales",
       "colorId": 5
     },
     {
       "id": 2,
-      "name": "Фронтенд",
+      "name": "Frontend",
       "colorId": 4
     },
     {
       "id": 3,
-      "name": "Фильмы и сериалы",
+      "name": "Movies and series",
       "colorId": 3
     },
     {
       "id": 4,
-      "name": "Книги",
+      "name": "Books",
       "colorId": 2
     },
     {
       "id": 5,
-      "name": "Личное",
+      "name": "Personal",
       "colorId": 1
     },
     {
-      "name": "Спорт",
+      "name": "Sport",
       "colorId": 3,
       "id": 6
     },
     {
-      "name": "Курс по ReactJS ToDo",
+      "name": "ReactJS ToDo Course",
       "colorId": 7,
       "id": 7
     }
@@ -40,13 +40,13 @@
     {
       "id": 1,
       "listId": 2,
-      "text": "Изучить JavaScript",
+      "text": "Learn JavaScript",
       "completed": true
     },
     {
       "id": 2,
       "listId": 2,
-      "text": "Изучить паттерны проектирования",
+      "text": "Explore Design Patterns",
       "completed": false
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "listId": 4,
-      "text": "Купить 1984!",
+      "text": "Buy 1984!",
       "completed": true,
       "id": 10
     },
@@ -105,19 +105,19 @@
     },
     {
       "listId": 7,
-      "text": "Сделали сайдбар",
+      "text": "Made a sidebar",
       "completed": true,
       "id": 15
     },
     {
       "listId": 7,
-      "text": "Сделали список задач",
+      "text": "Made a to-do list",
       "completed": true,
       "id": 16
     },
     {
       "listId": 7,
-      "text": "Сделали удаление и редактирование задач и списков",
+      "text": "Made deleting and editing tasks and lists",
       "completed": true,
       "id": 17
     },

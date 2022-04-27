@@ -9,8 +9,17 @@ import closeIcon from '../../assets/img/close-icon.jpg'
 const AddList = ({colors}) => {
     const [visiblePopup, setVisiblePopup] = useState(false);
     const [seletedColor, selectColor] = useState(colors[0].id);
+    const [inputValue, setInputValue] = useState('');
 
-    return(
+    const addList = () => {
+        if (!inputValue) {
+            alert('enter list name');
+            return;
+        }
+console.log({ id: Math.random(), name: inputValue, colorId: seletedColor});
+};
+
+return(
         <div className="add-list">
             <List 
             onClick={() => setVisiblePopup(true)}
@@ -30,7 +39,9 @@ const AddList = ({colors}) => {
                 alt='close button' 
                 className="add-list__popup-close-btn"
                  />
-                <input className="field" type="text" placeholder="list name" />
+                <input value={inputValue} 
+                onChange={ e => setInputValue(e.target.value)}
+                className="field" type="text" placeholder="list name" />
                 <div className="add-list__popup-colors">
                     <ul>
                     {colors.map(color => (
@@ -41,7 +52,7 @@ const AddList = ({colors}) => {
                     ))}
                 </ul>
                 </div>
-                <button className="button">Add</button>
+                <button onClick={addList} className="button">Add</button>
             </div>
             )}
         </div>
