@@ -3,8 +3,9 @@ import List from './components/List/List.jsx';
 import listSvg from './assets/img/list.png';
 import AddList from './components/AddList/AddList.jsx';
 import DB from './assets/db.json';
-
-
+import  './index.scss';
+import './App.scss';
+import Tasks from './components/Tasks/Tasks.jsx'
 function App() {
   const [lists, setLists] = useState(
     DB.lists.map(item => {
@@ -26,10 +27,11 @@ const onAddList = (obj) => {
             name: 'All tasks',
           }
         ]} />
-        <List items={lists} isRemovable />
+        <List items={lists} onRemove={(list) => { console.log(list);}} isRemovable />
         <AddList onAdd ={onAddList} colors={DB.colors} />
     </div>
       <div className="todo__tasks">
+        <Tasks /> 
       </div>
     </div>
   );

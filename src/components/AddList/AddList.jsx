@@ -11,6 +11,11 @@ const AddList = ({colors, onAdd}) => {
     const [seletedColor, selectColor] = useState(colors[0].id);
     const [inputValue, setInputValue] = useState('');
 
+    const onClose = () => {
+        setVisiblePopup(false);
+        setInputValue('');
+        selectColor(colors[0].id);
+    }
     const addList = () => {
         if (!inputValue) {
             alert('enter list name');
@@ -18,6 +23,7 @@ const AddList = ({colors, onAdd}) => {
         }
         const color = colors.filter(c => c.id === seletedColor)[0].name;
         onAdd({ id: Math.random(), name: inputValue, color});
+        onClose();
 };
 
 return(
@@ -35,7 +41,7 @@ return(
             {visiblePopup && (
             <div className="add-list__popup">
                 <img 
-                onClick={() => setVisiblePopup(false)}
+                onClick={onClose}
                 src={closeIcon} 
                 alt='close button' 
                 className="add-list__popup-close-btn"
