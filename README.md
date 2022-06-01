@@ -18,4 +18,5 @@ Tasks:
  ✓Layout of the first page of the Content
     Screw color selection from the server
     Functionality of the button: Delete list
+    Switching between lists
     ...
