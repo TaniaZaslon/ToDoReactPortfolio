@@ -1,7 +1,7 @@
 import React from 'react';
 import "./List.scss";
 import classNames from 'classnames';
-import Badge from '../Badge/badge';
+import Badge from '../Badge/Badge';
 import removeSvg from '../../assets/img/close-icon.jpg'
 
 const List = ({items, isRemovable, onClick, onRemove }) => {
@@ -13,7 +13,7 @@ const List = ({items, isRemovable, onClick, onRemove }) => {
 }    
     return (
         <ul onClick={onClick} className="list">
-            {items.map((item, index) => (
+            {items != null && items.map((item, index) => (
                  <li 
                  key={index} 
                  className={classNames(item.className, {'active': item.active})}

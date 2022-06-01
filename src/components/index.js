@@ -1,4 +1,4 @@
-export {default as addList} from './AddList';
-export {default as Badge} from './Badge';
-export {default as List} from './List';
-export {default as Tasks} from './Tasks';
+export {default as AddList} from './AddList/AddList.jsx';
+export {default as Badge} from './Badge/Badge.jsx';
+export {default as List} from './List/List.jsx';
+export {default as Tasks} from './Tasks/Tasks.jsx';

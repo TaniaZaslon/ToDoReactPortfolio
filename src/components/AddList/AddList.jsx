@@ -1,15 +1,22 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import List from "../List/List.jsx";
-import plusSvg from '../../assets/img/plus.png';
-import './AddList.scss';
-import Badge from "../Badge/badge";
+import Badge from "../Badge/Badge";
 
+import plusSvg from '../../assets/img/plus.png';
 import closeIcon from '../../assets/img/close-icon.jpg'
+
+import './AddList.scss';
 
 const AddList = ({colors, onAdd}) => {
     const [visiblePopup, setVisiblePopup] = useState(false);
-    const [seletedColor, selectColor] = useState(colors[0].id);
+    const [seletedColor, selectColor] = useState(3);
     const [inputValue, setInputValue] = useState('');
+
+    useEffect (() => {
+        if (Array.isArray(colors)) {
+            selectColor(colors[0].id);
+        }
+    }, [colors]);
 
     const onClose = () => {
         setVisiblePopup(false);
@@ -47,8 +54,9 @@ return(
                 className="add-list__popup-close-btn"
                  />
                 <input value={inputValue} 
-                onChange={ e => setInputValue(e.target.value)}
+                onChange={e => setInputValue(e.target.value)}
                 className="field" type="text" placeholder="list name" />
+                
                 <div className="add-list__popup-colors">
                     <ul>
                     {colors.map(color => (
