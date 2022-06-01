@@ -6,6 +6,13 @@ Ability to color-code tasks.
 A card for each task with a checklist.
 And the ability to mark completed tasks.***
 
+### Stack:
+
+- ReactJS (useState, useReducer, useEffect)
+- React Router
+- Axios
+- classnames
+
 ### Tasks:
 
 - [x] Install the application.
